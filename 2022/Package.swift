@@ -11,7 +11,7 @@ let package = Package(
     dependencies: [
     ],
     targets: [
-        .executableTarget(name: "Day1", dependencies: []),
+        .executableTarget(name: "Day1", dependencies: [], resources: [.process("input.txt")]),
         .executableTarget(name: "Day2", dependencies: []),
         .executableTarget(name: "Day3", dependencies: []),
         .executableTarget(name: "Day4", dependencies: []),
