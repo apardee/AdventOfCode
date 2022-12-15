@@ -3,27 +3,41 @@
 
 import PackageDescription
 
+func dailyExecutableTarget(name: String) -> Target {
+    return .executableTarget(name: name,
+                      dependencies: [
+                        "Shared"
+                      ],
+                      resources: [
+                        .process("Input.txt"),
+                        .process("TestInput.txt")
+                      ])
+}
+
 let package = Package(
     name: "AdventOfCode2022",
     platforms: [
         .macOS(.v13)
     ],
+    products: [
+    ],
     dependencies: [
+        .package(path: "./Sources/Shared")
     ],
     targets: [
-        .executableTarget(name: "Day1", dependencies: [], resources: [.process("input.txt")]),
-        .executableTarget(name: "Day2", dependencies: []),
-        .executableTarget(name: "Day3", dependencies: []),
-        .executableTarget(name: "Day4", dependencies: []),
-        .executableTarget(name: "Day5", dependencies: []),
-        .executableTarget(name: "Day6", dependencies: []),
-        .executableTarget(name: "Day7", dependencies: []),
-        .executableTarget(name: "Day8", dependencies: []),
-        .executableTarget(name: "Day9", dependencies: []),
-        .executableTarget(name: "Day10", dependencies: []),
-        .executableTarget(name: "Day11", dependencies: []),
-        .executableTarget(name: "Day12", dependencies: []),
-        .executableTarget(name: "Day13", dependencies: []),
-        .executableTarget(name: "Day14", dependencies: []),
+        dailyExecutableTarget(name: "Day1"),
+        dailyExecutableTarget(name: "Day2"),
+        dailyExecutableTarget(name: "Day3"),
+        dailyExecutableTarget(name: "Day4"),
+        dailyExecutableTarget(name: "Day5"),
+        dailyExecutableTarget(name: "Day6"),
+        dailyExecutableTarget(name: "Day7"),
+        dailyExecutableTarget(name: "Day8"),
+        dailyExecutableTarget(name: "Day9"),
+        dailyExecutableTarget(name: "Day10"),
+        dailyExecutableTarget(name: "Day11"),
+        dailyExecutableTarget(name: "Day12"),
+        dailyExecutableTarget(name: "Day13"),
+        dailyExecutableTarget(name: "Day14"),
     ]
 )

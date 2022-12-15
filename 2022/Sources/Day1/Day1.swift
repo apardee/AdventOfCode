@@ -1,9 +1,8 @@
 import Foundation
+import Shared
 
 @main
 public struct Day1 {
-    
-//    private static let input: String!
     
     public static func main() {
         solvePart1()
@@ -11,8 +10,7 @@ public struct Day1 {
     }
     
     private static func getCalorieTotals() -> [Int] {
-        let path = Bundle.module.url(forResource: "input", withExtension: "txt")!
-        let input = try! String(contentsOf: path)
+        let input = try! loadInput(bundle: Bundle.module)
         
         // Parse and split up the input in an array for each elf.
         let elfCals = input
