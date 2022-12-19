@@ -41,5 +41,6 @@ let package = Package(
         dailyExecutableTarget(name: "Day14"),
         dailyExecutableTarget(name: "Day15"),
         dailyExecutableTarget(name: "Day16"),
+        dailyExecutableTarget(name: "Day17"),
     ]
 )
