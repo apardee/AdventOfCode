@@ -4,14 +4,15 @@
 import PackageDescription
 
 func dailyExecutableTarget(name: String) -> Target {
-    return .executableTarget(name: name,
-                      dependencies: [
-                        "Shared"
-                      ],
-                      resources: [
-                        .process("Input.txt"),
-                        .process("TestInput.txt")
-                      ])
+    return .executableTarget(
+        name: name,
+        dependencies: [
+            "Shared"
+        ],
+        resources: [
+            .process("Input.txt"),
+            .process("TestInput.txt")
+        ])
 }
 
 let package = Package(
@@ -43,5 +44,6 @@ let package = Package(
         dailyExecutableTarget(name: "Day16"),
         dailyExecutableTarget(name: "Day17"),
         dailyExecutableTarget(name: "Day18"),
+        dailyExecutableTarget(name: "Day19"),
     ]
 )
